@@ -1,0 +1,81 @@
+package templates
+
+templ head(){
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>kindred hair co</title>
+        <link rel="stylesheet" href="./assets/bulma/css/bulma.css"/>
+        <link rel="stylesheet" href="./assets/kindred/css/kindred.css"/>
+    </head>
+}
+
+templ nav(){
+    <nav class="navbar">
+        <div class="container is-max-widescreen" style="display:block;">
+            <div class="level" style="position: relative;">
+                <div class="level-item has-text-centered menu-item">
+                    <div>
+                        <a href="#about">about</a>
+                    </div>    
+                </div>   
+                <div class="level-item has-text-centered menu-item">
+                    <div>
+                        <a href="https://kindredhairco.glossgenius.com/services">book</a>
+                    </div>    
+                </div>   
+                <div class="level-item has-text-centered">
+                    <div>
+                        <p class="logo">kindred</p>
+                        <p class="heading">hair co.</p>
+                    </div>
+                </div>  
+                <div class="level-item has-text-centered menu-item">
+                    <div>
+                        <a href="#team">team</a>
+                    </div>    
+                </div>   
+                <div class="level-item has-text-centered menu-item">
+                    <div>
+                        <a href="#contact">contact</a>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </nav>
+}
+
+templ scripts(){
+    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyDaJiC-LWPX6744S-xpvxgdOLN10u54caY", v: "beta"});
+    </script>
+    <script language="javascript">
+        
+        let map;
+
+        async function initMap() {
+        // The location of Uluru
+        const position = { lat: 39.37737566446219, lng: -104.86014137324268 };
+        // Request needed libraries.
+        //@ts-ignore
+        const { Map } = await google.maps.importLibrary("maps");
+        const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+        // The map, centered at Uluru
+        map = new Map(document.getElementById("map"), {
+            zoom: 16,
+            center: position,
+            mapId: "DEMO_MAP_ID",
+        });
+
+        // The marker, positioned at Uluru
+        const marker = new AdvancedMarkerElement({
+            map: map,
+            position: position,
+            title: "Uluru",
+        });
+        }
+
+        initMap();
+    </script>
+}

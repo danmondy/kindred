@@ -1,0 +1,32 @@
+html{
+    background-color:#B7B7A4;
+    color:#FFF1E6;
+}
+
+.container .box.main-container {
+    background-color: #45453F;
+}
+
+.we-like-you{
+    background-color:#B7B7A4;
+}
+
+nav  a:link, a:visited{
+    text-transform: uppercase;
+    color:#FFF1E6;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+}
+
+
+
+.section.team{
+    background-color:#CB997E;
+}
+
+.instagram-container{
+    background-color: #FFF1E6;
+}
+.instagram-container .hero .title{
+    
+    color: #FFF1E6;
+}
