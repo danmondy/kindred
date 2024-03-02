@@ -112,12 +112,14 @@ h1{
 }
 .about-us .one-image{
     flex:1 1;
+    overflow:hidden;
 }
 .one-image img{    
     object-fit:cover;
     min-height:560px;
     justify-content:center;
     align-items:center;
+    flex:1;
 }
 .about-us .two-images{
     flex: 1 1;
@@ -360,6 +362,10 @@ h1{
         display:none;
     }
     .team .member{
-        flex: .5 0 100%;
+        flex: 0 0 46%;
+    }
+    .about-us{
+        height:auto;
+        flex-direction:column;
     }
 }
