@@ -4,12 +4,13 @@ templ head(){
     <head>
         <title>kindred hair co - Castle Rock, Co - Salon</title>
         <meta charset="utf-8"/>
-        <meta name="description" conten="Hair Salon in Castle Rock. Beatiful, Stylish, Creative."/>
+        <meta name="description" conten="Hair Salon Studio serving Castle Rock, Castle Pines, Highlands Ranch and the South Denver area. We strive to give you beatiful, stylish, creative and expert cuts everytime."/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
         
         <link rel="stylesheet" href="./assets/bulma/css/bulma.css"/>
         <link rel="stylesheet" href="./assets/kindred/css/kindred.css"/>
+        <!--<script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>-->
     </head>
 }
 
@@ -48,7 +49,72 @@ templ nav(){
     </nav>
 }
 
+templ modal(){
+
+    //currently this is just a policies only modal.
+    //In the future this will be reusable with htmx targeting the modal-content to get ajax reponses
+    <div class="modal" id="page-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+           <div class="box">
+                <div class="title">Booking</div>
+                <p>In order to book, we do require a credit card on file to hold your time slot. This allows for touch free check out at the front desk, and protects our stylists time. See cancellation policy below. We do not offer refunds for services. However, re-dos are offered and assessed case by case. If a mistake is made on our end, a re-do will be offered free of charge. A re-do only encompasses the service being re done. If you would like to add on a finishing service that will be an additional charge. To get a re-do appointment, please contact the front desk (not your stylist) no less than 7 days after your initial appointment. We will be happy to make sure you are perfectly satisfied with your hair! All sales are final for all hair products. We do not offer refunds for other goods and accessories, but within one week of purchase we offer an in store exchange."</p>
+                <div class="title" style="padding-top: 19px;" >Cancellation Policy</div>
+                <p> If you need to reschedule, please do so before the 24 business hour window of your appointment. If your appointment is no showed, cancelled, or rescheduled within this window, 100% of the booked services will be charged. This means if you have a Monday appointment we must know by Friday if you need to cancel. Our 24 business hour cancellation policy must be strictly enforced to protect our stylists time. If you are running late, please call the salon. After 15 minutes, we hold the decision making to accept or decline your appointment and the stylist has the authority to alter services to accommodate the time available.</p>               
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+}
+
 templ scripts(){
+    <script>
+    
+        document.addEventListener('DOMContentLoaded', () => {
+        console.log("Dom Content Loaded");
+        // Functions to open and close a modal
+        function openModal($el) {
+            $el.classList.add('is-active');
+        }
+
+        function closeModal($el) {
+            $el.classList.remove('is-active');
+        }
+
+        function closeAllModals() {
+            (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+                closeModal($modal);
+            });
+        }
+
+        // Add a click event on buttons to open a specific modal
+        (document.querySelectorAll('#policies') || []).forEach(($trigger) => {
+            const modal = $trigger.dataset.target;
+            const $target = document.getElementById(modal);            
+            console.log($target);
+            $trigger.addEventListener('click', () => {
+                openModal($target);
+            });
+        });
+
+        // Add a click event on various child elements to close the parent modal
+        (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+            const $target = $close.closest('.modal');
+
+            $close.addEventListener('click', () => {
+            closeModal($target);
+            });
+        });
+
+        // Add a keyboard event to close all modals
+        document.addEventListener('keydown', (event) => {
+            if(event.key === "Escape") {
+            closeAllModals();
+            }
+        });
+        });
+    </script>
+
     <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
         ({key: "AIzaSyDaJiC-LWPX6744S-xpvxgdOLN10u54caY", v: "beta"});
     </script>
@@ -80,5 +146,7 @@ templ scripts(){
         }
 
         initMap();
+
+        
     </script>
 }

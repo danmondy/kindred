@@ -32,10 +32,19 @@ templ IndexPage(){
                                 Our hope is to be a safe space to come to for inspiration, relaxation and great hair.
                                 We approach hair with intentionality during the entire process and want you to feel like your best you.</p>
                         </div>
-                        <div class="one-image">
+                        <div class="about-us-images mobile-show">
+                            <div class="one-image">
+                                <img src="assets/images/salon (3).jpg"/>
+                            </div>
+                            <div class="two-images">
+                                <img src="assets/images/salon (7).jpg"/>
+                                <img src="assets/images/salon (10).jpg"/>
+                            </div>
+                        </div>
+                        <div class="one-image mobile-hide">
                             <img src="assets/images/salon (3).jpg"/>
                         </div>
-                        <div class="two-images">
+                        <div class="two-images mobile-hide">
                             <img src="assets/images/salon (7).jpg"/>
                             <img src="assets/images/salon (10).jpg"/>
                         </div>
@@ -149,9 +158,10 @@ templ IndexPage(){
                 </div>
             </div>
             <div class="footer" style="display:flex;flex-direction:row;justify-content:center;">
-                <p><a href="/policies" target="_blank">policies</a></p>
+                <p><a href="javascript:void(0);" id="policies" data-target="page-modal">policies</a></p>
                 <p>Copyright 2023</p>
             </div>
+            @modal()
             @scripts()
         </body>
     </html>

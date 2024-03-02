@@ -342,17 +342,14 @@ h1{
     .level-item:not(:last-child){
         margin:0;
     }
-    .about-us .two-images{
-        display:none;
-    }
     .menu-item{
         display:none;
     }
     .mobile-show{
-        display:block;
+        display:flex !important;
     }
     .mobile-hide{
-        display:none;
+        display:none !important;
     }
     .mobile-title{
         display:flex;
@@ -362,10 +359,16 @@ h1{
         display:none;
     }
     .team .member{
-        flex: 0 0 46%;
+        flex: 0 1 44%;
+        align-items: center;
     }
     .about-us{
         height:auto;
         flex-direction:column;
+    }
+    .about-us-images{
+        height:560px;
+        display:flex;
+        flex-direction: row;        
     }
 }

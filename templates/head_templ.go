@@ -23,7 +23,7 @@ func head() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<head><title>kindred hair co - Castle Rock, Co - Salon</title><meta charset=\"utf-8\"><meta name=\"description\" conten=\"Hair Salon in Castle Rock. Beatiful, Stylish, Creative.\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><link rel=\"stylesheet\" href=\"./assets/bulma/css/bulma.css\"><link rel=\"stylesheet\" href=\"./assets/kindred/css/kindred.css\"></head>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<head><title>kindred hair co - Castle Rock, Co - Salon</title><meta charset=\"utf-8\"><meta name=\"description\" conten=\"Hair Salon Studio serving Castle Rock, Castle Pines, Highlands Ranch and the South Denver area. We strive to give you beatiful, stylish, creative and expert cuts everytime.\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><link rel=\"stylesheet\" href=\"./assets/bulma/css/bulma.css\"><link rel=\"stylesheet\" href=\"./assets/kindred/css/kindred.css\"><!--<script src=\"https://unpkg.com/htmx.org@1.9.10\" integrity=\"sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC\" crossorigin=\"anonymous\"></script>--></head>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -58,7 +58,7 @@ func nav() templ.Component {
 	})
 }
 
-func scripts() templ.Component {
+func modal() templ.Component {
 	return templ.ComponentFunc(func(ctx context.Context, templ_7745c5c3_W io.Writer) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templ_7745c5c3_W.(*bytes.Buffer)
 		if !templ_7745c5c3_IsBuffer {
@@ -71,7 +71,31 @@ func scripts() templ.Component {
 			templ_7745c5c3_Var3 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<script>(g=>{var h,a,k,p=\"The Google Maps JavaScript API\",c=\"google\",l=\"importLibrary\",q=\"__ib__\",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement(\"script\"));e.set(\"libraries\",[...r]+\"\");for(k in g)e.set(k.replace(/[A-Z]/g,t=>\"_\"+t[0].toLowerCase()),g[k]);e.set(\"callback\",c+\".maps.\"+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+\" could not load.\"));a.nonce=m.querySelector(\"script[nonce]\")?.nonce||\"\";m.head.append(a)}));d[l]?console.warn(p+\" only loads once. Ignoring:\",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})\r\n        ({key: \"AIzaSyDaJiC-LWPX6744S-xpvxgdOLN10u54caY\", v: \"beta\"});\r\n    </script><script language=\"javascript\">\r\n        \r\n        let map;\r\n\r\n        async function initMap() {\r\n        // The location of Uluru\r\n        const position = { lat: 39.37737566446219, lng: -104.86014137324268 };\r\n        // Request needed libraries.\r\n        //@ts-ignore\r\n        const { Map } = await google.maps.importLibrary(\"maps\");\r\n        const { AdvancedMarkerElement } = await google.maps.importLibrary(\"marker\");\r\n\r\n        // The map, centered at Uluru\r\n        map = new Map(document.getElementById(\"map\"), {\r\n            zoom: 16,\r\n            center: position,\r\n            mapId: \"DEMO_MAP_ID\",\r\n        });\r\n\r\n        // The marker, positioned at Uluru\r\n        const marker = new AdvancedMarkerElement({\r\n            map: map,\r\n            position: position,\r\n            title: \"Uluru\",\r\n        });\r\n        }\r\n\r\n        initMap();\r\n    </script>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"modal\" id=\"page-modal\"><div class=\"modal-background\"></div><div class=\"modal-content\"><div class=\"box\"><div class=\"title\">Booking</div><p>In order to book, we do require a credit card on file to hold your time slot. This allows for touch free check out at the front desk, and protects our stylists time. See cancellation policy below. We do not offer refunds for services. However, re-dos are offered and assessed case by case. If a mistake is made on our end, a re-do will be offered free of charge. A re-do only encompasses the service being re done. If you would like to add on a finishing service that will be an additional charge. To get a re-do appointment, please contact the front desk (not your stylist) no less than 7 days after your initial appointment. We will be happy to make sure you are perfectly satisfied with your hair! All sales are final for all hair products. We do not offer refunds for other goods and accessories, but within one week of purchase we offer an in store exchange.\"</p><div class=\"title\" style=\"padding-top: 19px;\">Cancellation Policy</div><p>If you need to reschedule, please do so before the 24 business hour window of your appointment. If your appointment is no showed, cancelled, or rescheduled within this window, 100% of the booked services will be charged. This means if you have a Monday appointment we must know by Friday if you need to cancel. Our 24 business hour cancellation policy must be strictly enforced to protect our stylists time. If you are running late, please call the salon. After 15 minutes, we hold the decision making to accept or decline your appointment and the stylist has the authority to alter services to accommodate the time available.</p></div></div><button class=\"modal-close is-large\" aria-label=\"close\"></button></div>")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		if !templ_7745c5c3_IsBuffer {
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteTo(templ_7745c5c3_W)
+		}
+		return templ_7745c5c3_Err
+	})
+}
+
+func scripts() templ.Component {
+	return templ.ComponentFunc(func(ctx context.Context, templ_7745c5c3_W io.Writer) (templ_7745c5c3_Err error) {
+		templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templ_7745c5c3_W.(*bytes.Buffer)
+		if !templ_7745c5c3_IsBuffer {
+			templ_7745c5c3_Buffer = templ.GetBuffer()
+			defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
+		}
+		ctx = templ.InitializeContext(ctx)
+		templ_7745c5c3_Var4 := templ.GetChildren(ctx)
+		if templ_7745c5c3_Var4 == nil {
+			templ_7745c5c3_Var4 = templ.NopComponent
+		}
+		ctx = templ.ClearChildren(ctx)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<script>\r\n    \r\n        document.addEventListener('DOMContentLoaded', () => {\r\n        console.log(\"Dom Content Loaded\");\r\n        // Functions to open and close a modal\r\n        function openModal($el) {\r\n            $el.classList.add('is-active');\r\n        }\r\n\r\n        function closeModal($el) {\r\n            $el.classList.remove('is-active');\r\n        }\r\n\r\n        function closeAllModals() {\r\n            (document.querySelectorAll('.modal') || []).forEach(($modal) => {\r\n                closeModal($modal);\r\n            });\r\n        }\r\n\r\n        // Add a click event on buttons to open a specific modal\r\n        (document.querySelectorAll('#policies') || []).forEach(($trigger) => {\r\n            const modal = $trigger.dataset.target;\r\n            const $target = document.getElementById(modal);            \r\n            console.log($target);\r\n            $trigger.addEventListener('click', () => {\r\n                openModal($target);\r\n            });\r\n        });\r\n\r\n        // Add a click event on various child elements to close the parent modal\r\n        (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {\r\n            const $target = $close.closest('.modal');\r\n\r\n            $close.addEventListener('click', () => {\r\n            closeModal($target);\r\n            });\r\n        });\r\n\r\n        // Add a keyboard event to close all modals\r\n        document.addEventListener('keydown', (event) => {\r\n            if(event.key === \"Escape\") {\r\n            closeAllModals();\r\n            }\r\n        });\r\n        });\r\n    </script><script>(g=>{var h,a,k,p=\"The Google Maps JavaScript API\",c=\"google\",l=\"importLibrary\",q=\"__ib__\",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement(\"script\"));e.set(\"libraries\",[...r]+\"\");for(k in g)e.set(k.replace(/[A-Z]/g,t=>\"_\"+t[0].toLowerCase()),g[k]);e.set(\"callback\",c+\".maps.\"+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+\" could not load.\"));a.nonce=m.querySelector(\"script[nonce]\")?.nonce||\"\";m.head.append(a)}));d[l]?console.warn(p+\" only loads once. Ignoring:\",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})\r\n        ({key: \"AIzaSyDaJiC-LWPX6744S-xpvxgdOLN10u54caY\", v: \"beta\"});\r\n    </script><script language=\"javascript\">\r\n        \r\n        let map;\r\n\r\n        async function initMap() {\r\n        // The location of Uluru\r\n        const position = { lat: 39.37737566446219, lng: -104.86014137324268 };\r\n        // Request needed libraries.\r\n        //@ts-ignore\r\n        const { Map } = await google.maps.importLibrary(\"maps\");\r\n        const { AdvancedMarkerElement } = await google.maps.importLibrary(\"marker\");\r\n\r\n        // The map, centered at Uluru\r\n        map = new Map(document.getElementById(\"map\"), {\r\n            zoom: 16,\r\n            center: position,\r\n            mapId: \"DEMO_MAP_ID\",\r\n        });\r\n\r\n        // The marker, positioned at Uluru\r\n        const marker = new AdvancedMarkerElement({\r\n            map: map,\r\n            position: position,\r\n            title: \"Uluru\",\r\n        });\r\n        }\r\n\r\n        initMap();\r\n\r\n        \r\n    </script>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
