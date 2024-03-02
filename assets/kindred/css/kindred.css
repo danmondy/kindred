@@ -61,12 +61,14 @@ h1{
     max-height:500px;    
     overflow:hidden;
 }
+
 .left-img img{
+    width:100%;
+}
+
+.right-img img{
     margin-top: 50%;
     transform: translateY(-50%);
-}
-.right-img img{
-    
 }
 
 .book-now .title{
@@ -93,7 +95,7 @@ h1{
 
 .about-us{
     background-color:#F0EFEB;
-    height:400px;
+    height:560px;
     display:flex;
     flex-direction: row;    
     overflow:hidden;
@@ -111,7 +113,7 @@ h1{
 }
 .one-image img{    
     object-fit:cover;
-    min-height:400px;
+    min-height:560px;
     justify-content:center;
     align-items:center;
 }
@@ -196,6 +198,7 @@ h1{
     font-family: Verdana;
 }
 .team .member {
+    max-width:300px;
     flex: 1;
 }
 
@@ -302,6 +305,10 @@ h1{
     display:none;
 }
 @media (max-width: 769px){
+    .people{
+        flex-direction:column;
+        justify-content: center;
+    }
     .level-item:not(:last-child){
         margin:0;
     }
