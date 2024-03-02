@@ -132,7 +132,8 @@ h1{
     font-weight:lighter;
     font-family:Lora;
     text-transform: lowercase;
-    padding-bottom:10px;
+    padding:4px;
+    margin:0;
 }
 
 .we-like-you{
@@ -297,6 +298,9 @@ h1{
 .footer p{
     padding:40px;
 }
+.mobile-show{
+    display:none;
+}
 @media (max-width: 769px){
     .level-item:not(:last-child){
         margin:0;
@@ -307,10 +311,20 @@ h1{
     .menu-item{
         display:none;
     }
-    .mobile-title{
+    .mobile-show{
         display:block;
+    }
+    .mobile-hide{
+        display:none;
+    }
+    .mobile-title{
+        display:flex;
+        flex-direction: row;
     }
     .member.large-title{
         display:none;
+    }
+    .team .member{
+        flex: .5 0 100%;
     }
 }
