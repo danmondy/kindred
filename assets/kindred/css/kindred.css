@@ -327,12 +327,16 @@ h1{
 .footer{
     background-color:transparent;
     padding:0;
+    color:#aFa196;
 }
 .footer p{
     padding:40px;
 }
 .mobile-show{
     display:none;
+}
+.footer a:link, .footer a:visited{
+    color:#FFF1E6;
 }
 @media (max-width: 769px){
     .people{
