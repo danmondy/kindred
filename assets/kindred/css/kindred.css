@@ -15,7 +15,9 @@ body{
     background-attachment: fixed; 
     background-size:cover;
 }
-
+p{
+    font-size:18px;
+}
 #map {
     height: 100%;
 }
@@ -167,7 +169,6 @@ h1{
 
 .section.team{
     background-color: rgba(255, 241, 230, .7);
-    padding:36px;
 }
 
 .section.team .people{
@@ -197,8 +198,21 @@ h1{
     font-size: 24px;
     font-family: Verdana;
 }
+
+
+.team .title{
+    color:#45453F;
+    font-size: 2.8rem;
+    font-weight:lighter;
+    font-family:Lora;
+    text-transform: lowercase;
+    padding-bottom:10px;
+}
 .team .member {
     max-width:300px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
     flex: 1;
 }
 
@@ -236,7 +250,18 @@ h1{
 }
 
 
-.team .title{
+.section{
+    padding: 84px 36px;
+}
+.why{
+    padding:84px 48px;
+    display:flex;
+    flex-direction: column;
+    align-items:center; 
+    background: url("/assets/images/herringbone.webp") repeat;
+}
+.why .title{
+    text-align: center;
     color:#45453F;
     font-size: 2.8rem;
     font-weight:lighter;
@@ -244,7 +269,10 @@ h1{
     text-transform: lowercase;
     padding-bottom:10px;
 }
-
+.why p{
+    max-width:800px;
+    color:#45453F;
+}
 .instagram-container{
     background-color: #FFF1E6;
 }
@@ -267,7 +295,7 @@ h1{
 }
 .info div.right {
     display:flex;
-    background-color:#FFF1E6;
+    background-color:#FFF6F1;
     flex-direction: column;
     justify-content: center;
 }
