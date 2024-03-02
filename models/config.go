@@ -11,6 +11,7 @@ type Config struct {
 	Db           DbConnection `json:"db"`
 	TemplatePath string       `json:"templateFolder"`
 	StaticFolder string       `json:"staticFolder"`
+	Policies     string       `json:"policies"`
 }
 
 type DbConnection struct {

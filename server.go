@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"net/http"
 
 	//templates
 	"github.com/a-h/templ"
@@ -22,6 +23,7 @@ func main() {
 	e.Static("/assets", cfg.StaticFolder)
 
 	e.GET("/", IndexHandler)
+	e.GET("/policies", PoliciesHandler)
 
 	e.Logger.Fatal(e.Start(fmt.Sprintf(":%s", cfg.Port)))
 }
@@ -43,5 +45,8 @@ func render(ctx echo.Context, statusCode int, t templ.Component) error {
 }
 
 func IndexHandler(c echo.Context) error {
-	return render(c, 200, templates.IndexPage())
+	return render(c, http.StatusOK, templates.IndexPage())
+}
+func PoliciesHandler(c echo.Context) error {
+	return c.String(http.StatusOK, cfg.Policies)
 }

@@ -289,6 +289,14 @@ nav  a:link, a:visited{
 .member.large-title{
     display:flex;flex-direction:column;justify-content:center;padding-right:24px;
 }
+
+.footer{
+    background-color:transparent;
+    padding:0;
+}
+.footer p{
+    padding:40px;
+}
 @media (max-width: 769px){
     .level-item:not(:last-child){
         margin:0;
