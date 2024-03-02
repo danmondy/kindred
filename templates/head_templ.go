@@ -47,7 +47,7 @@ func nav() templ.Component {
 			templ_7745c5c3_Var2 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<nav class=\"navbar\"><div class=\"container is-max-widescreen\" style=\"display:block;\"><div class=\"level\" style=\"position: relative;\"><div class=\"level-item has-text-centered menu-item\"><div><a href=\"#about\">about</a></div></div><div class=\"level-item has-text-centered menu-item\"><div><a href=\"https://kindredhairco.glossgenius.com/services\">book</a></div></div><div class=\"level-item has-text-centered\"><div><p class=\"logo\"><h1>kindred</h1></p><p class=\"heading\">hair co.</p></div></div><div class=\"level-item has-text-centered menu-item\"><div><a href=\"#team\">team</a></div></div><div class=\"level-item has-text-centered menu-item\"><div><a href=\"#contact\">contact</a></div></div></div></div></nav>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<nav class=\"navbar\"><div class=\"container is-max-widescreen\" style=\"display:block;\"><div class=\"level\" style=\"position: relative;\"><div class=\"level-item has-text-centered menu-item\"><div><a href=\"#about\">about</a></div></div><div class=\"level-item has-text-centered menu-item\"><div><a href=\"https://kindredhairco.glossgenius.com/services\">book</a></div></div><div class=\"level-item has-text-centered\"><div><h1>kindred</h1><p class=\"heading\">hair co.</p></div></div><div class=\"level-item has-text-centered menu-item\"><div><a href=\"#team\">team</a></div></div><div class=\"level-item has-text-centered menu-item\"><div><a href=\"#contact\">contact</a></div></div></div></div></nav>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
