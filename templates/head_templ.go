@@ -23,7 +23,7 @@ func head() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<head><title>kindred hair co - Castle Rock, Co - Salon</title><meta charset=\"utf-8\"><meta name=\"description\" conten=\"Hair Salon Studio serving Castle Rock, Castle Pines, Highlands Ranch and the South Denver area. We strive to give you beatiful, stylish, creative and expert cuts everytime.\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><link rel=\"stylesheet\" href=\"./assets/bulma/css/bulma.css\"><link rel=\"stylesheet\" href=\"./assets/kindred/css/kindred.css\"><!--<script src=\"https://unpkg.com/htmx.org@1.9.10\" integrity=\"sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC\" crossorigin=\"anonymous\"></script>--></head>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<head><title>Kindred Hair Co - Salon - Castle Rock, Colorado</title><meta charset=\"utf-8\"><meta name=\"description\" conten=\"Hair Salon Studio serving Castle Rock, Castle Pines, Highlands Ranch and the South Denver area. We strive to give you beatiful, stylish, creative and expert cuts everytime.\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><link rel=\"stylesheet\" href=\"./assets/bulma/css/bulma.css\"><link rel=\"stylesheet\" href=\"./assets/kindred/css/kindred.css\"><!--<script src=\"https://unpkg.com/htmx.org@1.9.10\" integrity=\"sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC\" crossorigin=\"anonymous\"></script>--></head>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
