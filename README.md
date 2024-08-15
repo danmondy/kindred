@@ -1,5 +1,24 @@
-This is a go website, though it's immediate functionality could be static.
+this project uses air, templ and echo
+the front end uses htmx and flexbox
 
-Plan is to deploy with Google Cloud Run, maybe docker
+#air
+- if air is not  install you can run this
+- go install github.com/cosmtrek/air@latest (builds air into your bin)
+- air init - will create the .air.toml file (hidden in project main)
+
+#templ
+- if templ is not installed
+- go install github.com/a-h/templ/cmd/templ@latest
+-
+#echo
+- go get github.com/labstack/echo/v4
+
+# PostgreSQL
+- This will be using postgresql
+- run psql to start the instance 
 
 
+
+#Icons are provided by Ionicons - just two scripts at the bottom of the page
+- http: https://ionic.io/ionicons/usage
+- usage: <ion-icon name="heart"></ion-icon>
